@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.sign-in-form{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.content{
+    width: 280px;
+    height: 520px;
+    background: #000;
+    position: absolute;
+    text-align: center;
+    top: 140px;
+    right: 870px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.content h1{
+    width: 250px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #000;
+    font-size: 22px;
+    background-color: rgb(216, 244, 8);
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.content input{
+    width: 240px;
+    height: 35px;
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.content input{
+    outline: navajowhite;
+}
+::placeholder{
+    color: #000;
+    font-family: Arial;
+}
+.btn{
+    width: 240px;
+    height: 40px;
+    background: rgb(230, 246, 3);
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: .4s ease;
+}
+.btn:hover{
+    background: #fff;
+    color: rgb(249, 249, 10);
+}
+.btn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
