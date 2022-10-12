@@ -68,10 +68,9 @@
     width: 220px;
     font-family: sans-serif;
     text-align: center;
-    color: #000;
+    color: white;
     font-size: 22px;
-    background-color: rgb(216, 244, 8);
-    border-radius: 10px;
+    border-radius: 0px;
     margin: 2px;
     padding: 8px;
 }
