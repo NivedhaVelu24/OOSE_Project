@@ -14,18 +14,18 @@
 
             <button class="cn"><a href="#"> JOIN US </a></button>
             <div>
-                <div id="error"></div>
-                <form id = "form" action="/">
-                    <div class="form">
+                
+                <form id = "form" action="/" method="get" class = "form" onsubmit="validate()">
                         <h2> Login Here </h2>
-                        <input id = "email" type="email" name="email" placeholder="Enter email here" required>
+                        <div id="error" style="color:red ;"></div>
+                        <input id = "email" type="email" name="email" placeholder="Enter email here">
+                    
                         <input id = "password" type="password" name="password" placeholder="Enter password">
                         <!-- <button id = "login" type = "submit" class="btn"><a href="#"> Login </a></button> -->
-                        <button class="btn">Login</button>
+                        <button type ="submit" class="btn" >Login</button>
 
                         <p class="link"> Don't have an account <br>
                         <a href="#"> Sign in </a> here </p>
-                    </div>
                 </form>
             </div>
         </div>
