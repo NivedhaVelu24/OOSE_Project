@@ -3,8 +3,10 @@
 <head>
     <title> STUDY BUDDY </title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
+    
     <div class="main">
         <div class="content">
             <h1> STUDY BUDDY </h1>
@@ -12,18 +14,24 @@
 
             <button class="cn"><a href="#"> JOIN US </a></button>
             <div>
-                <div class="form">
-                    <h2> Login Here </h2>
-                    <input id = "email" type="email" name="email" placeholder="Enter email here">
-                    <input id = "password" type="password" name="" placeholder="Enter password">
-                    <button id = "login" class="btn"><a href="#"> Login </a></button>
+                <div id="error"></div>
+                <form id = "form" action="/">
+                    <div class="form">
+                        <h2> Login Here </h2>
+                        <input id = "email" type="email" name="email" placeholder="Enter email here" required>
+                        <input id = "password" type="password" name="password" placeholder="Enter password">
+                        <!-- <button id = "login" type = "submit" class="btn"><a href="#"> Login </a></button> -->
+                        <button class="btn">Login</button>
 
-                    <p class="link"> Don't have an account <br>
-                    <a href="#"> Sign in </a> here </p>
-                </div>
+                        <p class="link"> Don't have an account <br>
+                        <a href="#"> Sign in </a> here </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
+    
 </body>
+
 </html>
