@@ -3,10 +3,9 @@
 <head>
     <title> Sign in </title>
     <link rel="stylesheet" href="style1.css">
-    <script defer src = "./script.js"></script>
+    <script defer type = "module" src="./script2.js"></script>
 </head>
 <body>
-    <!-- <script src="./script.js"></script> -->
     <div class="sign-in-form">
         <div class="content">
             <h1> Register here </h1>
@@ -17,14 +16,11 @@
             <input id = "createPassword" type="password" class="input-box" placeholder="create your password">
             <input id="confirmPassword" type="confirmpassword" class="input-box" placeholder="confirm password"> <br>
 <!-- test -->
-            <button onClick = "register()" class="btn">Register</button>
+            <button id = "register" class="btn">Register</button>
+
         </div>    
     </div>
-    <script src = "signin.html"></script>
-
-    <!-- fireBase -->
-    <script src = https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js></script>
-    <script src=https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js></script>
-    <script src=https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js></script>
+    <!-- <script src = "signin.html"></script> -->
 </body>
+
 </html>
