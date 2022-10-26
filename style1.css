@@ -61,7 +61,7 @@
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
-    color: #fff;
+    color: #000;
     transition: .4s ease;
 }
 .btn:hover{
