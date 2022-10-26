@@ -39,6 +39,7 @@ register.addEventListener('click',(e) => {
       })
 
       alert('user created!');
+      window.location.href = "login.html";
       // ...
     })
     .catch((error) => {
@@ -50,60 +51,3 @@ register.addEventListener('click',(e) => {
     });
 
 });
-
-// login.addEventListener('click',(e)=>{
-//     alert("login clicked");
-//    var email = document.getElementById('email').value;
-//    var password = document.getElementById('password').value;
-
-//       signInWithEmailAndPassword(auth, email, password)
-//       .then((userCredential) => {
-//         // Signed in 
-//         const user = userCredential.user;
-
-//         const dt = new Date();
-//          update(ref(database, 'users/' + user.uid),{
-//           last_login: dt,
-//         })
-
-//          alert('User loged in!');
-//         // ...
-//       })
-//       .catch((error) => {
-//         const errorCode = error.code;
-//         const errorMessage = error.message;
-
-//         alert(errorMessage);
-//   });
-
-//  });
-
-// const user = auth.currentUser;
-// onAuthStateChanged(auth, (user) => {
-//   if (user) {
-//     // User is signed in, see docs for a list of available properties
-//     // https://firebase.google.com/docs/reference/js/firebase.User
-//     const uid = user.uid;
-//     //bla bla bla
-//     // ...
-//   } else {
-//     // User is signed out
-//     // ...
-//     //bla bla bla
-//   }
-// });
-
-// logout.addEventListener('click',(e)=>{
-
-//    signOut(auth).then(() => {
-//      // Sign-out successful.
-//      alert('user loged out');
-//    }).catch((error) => {
-//      // An error happened.
-//      const errorCode = error.code;
-//      const errorMessage = error.message;
-
-//         alert(errorMessage);
-//    });
-
-// });
