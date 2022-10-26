@@ -3,35 +3,29 @@
 <head>
     <title> STUDY BUDDY </title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="./script2.js"></script>
+    <script defer type="module" src="./loginscript.js"></script>
 </head>
 <body>
-    
     <div class="main">
         <div class="content">
             <h1> STUDY BUDDY </h1>
             <p class="par"> This website is to help students get their appointments with the intructors, who can help them solve their doubts and explain any concept in the respective courses.</p>
 
             <button class="cn"><a href="#"> JOIN US </a></button>
-            <div>
+            <div class="form">
                 
-                <form id = "form" action="/" method="get" class = "form" onsubmit="validate()">
                         <h2> Login Here </h2>
                         <div id="error" style="color:red ;"></div>
                         <input id = "email" type="email" name="email" placeholder="Enter email here">
                     
                         <input id = "password" type="password" name="password" placeholder="Enter password">
                         <!-- <button id = "login" type = "submit" class="btn"><a href="#"> Login </a></button> -->
-                        <button type ="submit" class="btn" >Login</button>
-
+                        <button id="login" class="btn">Login</button>
                         <p class="link"> Don't have an account <br>
                         <a href="./signin.html"> Sign in </a> here </p>
-                </form>
             </div>
         </div>
     </div>
-    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
-    <!-- fireBase -->
 </body>
 
 </html>

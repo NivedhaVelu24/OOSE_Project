@@ -21,62 +21,32 @@
   const database = getDatabase(app);
   const auth = getAuth();
 
-register.addEventListener('click',(e) => {
+   login.addEventListener('click',(e)=>{
+    alert("login clicked");
+   var email = document.getElementById('email').value;
+   var password = document.getElementById('password').value;
 
-  var username = document.getElementById('Username').value;
-  var email = document.getElementById('emailSignup').value;
-  var password = document.getElementById('createPassword').value;
-//   var confirmPassword = document.getElementById('confirmPassword').value;
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-     // Signed in 
-      const user = userCredential.user;
+        const dt = new Date();
+         update(ref(database, 'users/' + user.uid),{
+          last_login: dt,
+        })
 
-      set(ref(database, 'users/' + user.uid),{
-          username: username,
-          email: email
+         alert('User loged in!');
+        // ...
       })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
 
-      alert('user created!');
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+        alert(errorMessage);
+  });
 
-      alert(errorMessage);
-    // ..
-    });
-
-});
-
-// login.addEventListener('click',(e)=>{
-//     alert("login clicked");
-//    var email = document.getElementById('email').value;
-//    var password = document.getElementById('password').value;
-
-//       signInWithEmailAndPassword(auth, email, password)
-//       .then((userCredential) => {
-//         // Signed in 
-//         const user = userCredential.user;
-
-//         const dt = new Date();
-//          update(ref(database, 'users/' + user.uid),{
-//           last_login: dt,
-//         })
-
-//          alert('User loged in!');
-//         // ...
-//       })
-//       .catch((error) => {
-//         const errorCode = error.code;
-//         const errorMessage = error.message;
-
-//         alert(errorMessage);
-//   });
-
-//  });
+ });
 
 // const user = auth.currentUser;
 // onAuthStateChanged(auth, (user) => {
