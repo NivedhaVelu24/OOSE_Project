@@ -5,13 +5,13 @@
 }
 .sign-in-form{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(2.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../images/2.jpg);
     background-position: center;
     background-size: cover;
     height: 109vh;
 }
 .content{
-    width: 280px;
+    width: 280.5px;
     height: 380px;
     background: #000;
     position: absolute;
