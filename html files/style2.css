@@ -5,22 +5,18 @@
 }
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(./images/3.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../images/3.jpg);
     background-position: center;
     background-size: cover;
     height: 109vh;
 }
-.main h1{
-    text-align: center;
-    font-family: 'Times New Roman';
-    font-size: 50.2px;
-    padding-left: 20px;
-    margin-top: 0%;
-    letter-spacing: 2px;
-}
+
 .main .btn1{
-    width: 1600px;
-    height: 40px;
+    width: 160px;
+    height: 60px;
+    position: relative;
+    top: 40%;
+    left: 30%;
     background: #fff;
     border: none;
     margin-bottom: 10px;
@@ -36,11 +32,14 @@
     transition: .3s ease;
 }
 .btn1:hover{
-    background-color: rgb(231, 142, 18);
+    background-color: rgb(233, 160, 14);
 }
 .main .btn2{
     width: 160px;
-    height: 40px;
+    height: 60px;
+    position: relative;
+    top: 40%;
+    left: 40%;
     background: #fff;
     border: none;
     margin-bottom: 10px;
