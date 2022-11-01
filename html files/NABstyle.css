@@ -4,8 +4,8 @@
 }
 .main{
     width: 600px;
-    height: 380px;
-    background: rgb(184, 177, 177);
+    height: 600px;
+    background: #000;
     position: relative;
     top: 50%;
     left: 28%;
@@ -47,4 +47,29 @@
 ::placeholder{
     color: #000;
     font-family: Arial;
+}
+.main p{
+    color: #fff;
+    right: 30%;
+}
+.btn{
+    width: 240px;
+    height: 40px;
+    background: rgb(230, 246, 3);
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    transition: .4s ease;
+}
+.btn:hover{
+    background: #fff;
+    color: rgb(249, 249, 10);
+}
+.btn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
