@@ -3,8 +3,8 @@
     padding: 0px;
 }
 .main{
-    width: 600px;
-    height: 600px;
+    width: 480px;
+    height: 700px;
     background: #000;
     position: relative;
     top: 50%;
@@ -20,7 +20,7 @@
     font-family: sans-serif;
     text-align: center;
     position: relative;
-    left: 28%;
+    left: 22%;
     color: #000;
     font-size: 22px;
     background-color: rgb(146, 130, 226);
