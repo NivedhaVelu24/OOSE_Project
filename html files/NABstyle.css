@@ -55,7 +55,7 @@
 .btn{
     width: 240px;
     height: 40px;
-    background: rgb(230, 246, 3);
+    background: rgb(146, 130, 226);
     border: none;
     margin-top: 30px;
     font-size: 18px;
@@ -66,7 +66,7 @@
 }
 .btn:hover{
     background: #fff;
-    color: rgb(249, 249, 10);
+    color: rgb(61, 15, 231);
 }
 .btn a{
     text-decoration: none;
