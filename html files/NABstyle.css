@@ -3,9 +3,16 @@
     padding: 0px;
 }
 .main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../images/4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.main{
     width: 480px;
     height: 700px;
-    background: transparent;
+    background: #000;
     position: relative;
     top: 50%;
     left: 28%;
