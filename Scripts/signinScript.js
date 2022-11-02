@@ -1,11 +1,14 @@
 // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
+// Your web app's Firebase configuration
+
+register.addEventListener('click', (e) => {
+
   const firebaseConfig = {
     apiKey: "AIzaSyADh8fA1NB4alt_eRKEZVewSvrDHk-_2cI",
     authDomain: "studybuddy-9ed84.firebaseapp.com",
@@ -18,25 +21,25 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
+  //const database = getDatabase(app);
   const auth = getAuth();
-
-register.addEventListener('click',(e) => {
 
   var username = document.getElementById('Username').value;
   var email = document.getElementById('emailSignup').value;
   var password = document.getElementById('createPassword').value;
-//   var confirmPassword = document.getElementById('confirmPassword').value;
+  //   var confirmPassword = document.getElementById('confirmPassword').value;
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-     // Signed in 
+      // Signed in 
       const user = userCredential.user;
 
-      set(ref(database, 'users/' + user.uid),{
-          username: username,
-          email: email
+      const database = getDatabase(app);
+      update(ref(database, 'users/' + user.uid), {
+        username: username,
+        email: email
       })
+
 
       alert('user created!');
 
@@ -49,7 +52,7 @@ register.addEventListener('click',(e) => {
       const errorMessage = error.message;
 
       alert(errorMessage);
-    // ..
+      // ..
     });
 
 });
