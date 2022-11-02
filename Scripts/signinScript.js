@@ -39,7 +39,9 @@ register.addEventListener('click',(e) => {
       })
 
       alert('user created!');
-      window.location.href = "login.html";
+
+      //do not add below code, db wont update.
+      //window.location.href = "login.html";
       // ...
     })
     .catch((error) => {
