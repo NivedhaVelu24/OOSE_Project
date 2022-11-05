@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
@@ -25,19 +26,29 @@ submitbtn.addEventListener('click', (e) => {
 
     var course = document.getElementById('course').value;
     var instructor = document.getElementById('instructor').value;
-    var Days = document.getElementById('Days').value;
+    var email = document.getElementById('Days').value;
     var timeFrom = document.getElementById('timeFrom').value;
     var timeTo = document.getElementById('timeTo').value;
 
     const database = getDatabase(app);
-    update(ref(database, 'users/'), {
-        course: course,
-        instructor: instructor,
-        Days: Days,
-        timeFrom: timeFrom,
-        timeTo: timeTo
-    })
-    alert("Updated");
+
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        update(ref(database, 'users/' + user), {
+            course: course,
+            instructor: instructor,
+            email: email,
+            timeFrom: timeFrom,
+            timeTo: timeTo
+        })
+        alert("Updated");
+        // ...
+    }
+
 
     // function writeUserData() {
     //     const db = getDatabase();
@@ -51,5 +62,3 @@ submitbtn.addEventListener('click', (e) => {
     // }
     // writeUserData();
 });
-
-
