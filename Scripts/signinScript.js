@@ -59,7 +59,7 @@ register.addEventListener('click', (e) => {
       const user = userCredential.user;
 
       const database = getDatabase(app);
-      update(ref(database, 'users/' + username), {
+      set(ref(database, 'users/' + username), {
         username: username,
         email: email
       })

@@ -19,25 +19,27 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-
+const auth = getAuth();
 
 login.addEventListener('click', (e) => {
   alert("login clicked");
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
+  var username = document.getElementById('username').value;
 
-  const auth = getAuth();
+
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
 
       const dt = new Date();
-      update(ref(database, 'users/' + user.uid), {
+      update(ref(database, 'users/' + username), {
         last_login: dt
       })
+
       alert('User loged in!');
-      window.location.href = "../htmlFiles/welcomepage.html";
+
       // ...
     })
     .catch((error) => {
@@ -45,7 +47,9 @@ login.addEventListener('click', (e) => {
       const errorMessage = error.message;
       alert(errorMessage);
     });
+    window.location.href = "../htmlFiles/welcomepage.html";
 });
+
 
 
 
