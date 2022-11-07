@@ -12,7 +12,7 @@
 .main{
     width: 480px;
     height: 650px;
-    background: #000;
+    background: rgba(154, 143, 143, 0.434);
     position: relative;
     top: 50%;
     left: 28%;
