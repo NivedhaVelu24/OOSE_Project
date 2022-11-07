@@ -25,10 +25,9 @@ submitbtn.addEventListener('click', (e) => {
     //const database = getDatabase(app);
     var username = document.getElementById('username').value;
     var course = document.getElementById('course').value;
-    var instructor = document.getElementById('instructor').value;
-    var Date1 = document.getElementById('Date1').value;
-    var timeFrom = document.getElementById('timeFrom').value;
-    var timeTo = document.getElementById('timeTo').value;
+    var days = document.getElementById('days').value;
+    var time = document.getElementById('time').value;
+    var ampm = document.getElementById('ampm').value;
 
     const database = getDatabase(app);
 
@@ -39,9 +38,9 @@ submitbtn.addEventListener('click', (e) => {
         update(ref(database, 'users/' + username), {
             course: course,
             instructor: instructor,
-            date: Date1,
-            timeFrom: timeFrom,
-            timeTo: timeTo
+            days: days,
+            time: time,
+            AmPm: ampm
         })
         alert("Updated");
         // ...
