@@ -40,14 +40,17 @@ login.addEventListener('click', (e) => {
 
       alert('User loged in!');
 
-      // ...
+      setTimeout(function () {
+        window.location.href = '../htmlFiles/welcomepage.html';
+      }, 5000);
+
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       alert(errorMessage);
     });
-    window.location.href = "../htmlFiles/welcomepage.html";
+
 });
 
 

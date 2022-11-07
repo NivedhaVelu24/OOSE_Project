@@ -20,32 +20,6 @@ const app = initializeApp(firebaseConfig);
 // const database = getDatabase(app);
 const auth = getAuth();
 
-// Your web app's Firebase configuration
-
-// function RegisterUser(){
-//   const dbRef = ref(db);
-
-//   get(child(dbRef, "UsersList/"+username.value)).then((snapshot)=>{
-//     if(snapshot.exists()){
-//       alert("Account already exists!");
-//     }
-//     else{
-//       set(ref(db, "UsersList/"+username.value),
-//       {
-//         username: username.value,
-//         email: email.value,
-//         password: password.value
-//       })
-//       .then(()=> {
-//         alert("User added Successfully")
-//       })
-//       .catch((error)=>{
-//         alert("error"+error);
-//       })
-//     }
-//   })
-// }
-
 register.addEventListener('click', (e) => {
 
   var username = document.getElementById('Username').value;
@@ -66,16 +40,16 @@ register.addEventListener('click', (e) => {
 
       alert('user created!');
 
-      //do not add below code, db wont update.
-      //window.location.href = "login.html";
-      // ...
+      setTimeout(function () {
+        window.location.href = '../htmlFiles/login.html';
+      }, 3000);
+
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
 
       alert(errorMessage);
-      // ..
     });
 
 });

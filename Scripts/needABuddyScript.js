@@ -23,10 +23,10 @@ submitbtn.addEventListener('click', (e) => {
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     //const database = getDatabase(app);
-
+    var username = document.getElementById('username').value;
     var course = document.getElementById('course').value;
     var instructor = document.getElementById('instructor').value;
-    var email = document.getElementById('Days').value;
+    var Date1 = document.getElementById('Date1').value;
     var timeFrom = document.getElementById('timeFrom').value;
     var timeTo = document.getElementById('timeTo').value;
 
@@ -36,29 +36,14 @@ submitbtn.addEventListener('click', (e) => {
     const user = auth.currentUser;
 
     if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        update(ref(database, 'users/' + user), {
+        update(ref(database, 'users/' + username), {
             course: course,
             instructor: instructor,
-            email: email,
+            date: Date1,
             timeFrom: timeFrom,
             timeTo: timeTo
         })
         alert("Updated");
         // ...
     }
-
-
-    // function writeUserData() {
-    //     const db = getDatabase();
-    //     update(ref(db, 'users/' + user.uid), {
-    //         course: course,
-    //         instructor: instructor,
-    //         Days: Days,
-    //         timeFrom: timeFrom,
-    //         timeTo: timeTo
-    //     })
-    // }
-    // writeUserData();
 });
