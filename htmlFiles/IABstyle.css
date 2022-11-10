@@ -7,20 +7,20 @@
     background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../images/5.jpg);
     background-position: center;
     background-size: cover;
-    height: 109vh;
+    height: 115vh;
 }
 .main{
     width: 480px;
-    height: 520px;
-    background: #000;
+    height: 440px;
+    background: rgba(154, 143, 143, 0.434);
     position: relative;
     top: 50%;
     left: 28%;
     text-align: center;
     top: 140px;
     right: 870px;
-    border-radius: 10px;
-    padding: 25px;
+    border-radius: 12px;
+    padding: 50px;
 }
 .main h1{
     width: 250px;
@@ -58,6 +58,18 @@
 .main p{
     color: #fff;
     right: 30%;
+}
+.main select {
+    width: 240px;
+    height: 35px;
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    color: #000;
+    margin-top: 20px;
+    text-align: center;
+    
 }
 .btn{
     width: 240px;
