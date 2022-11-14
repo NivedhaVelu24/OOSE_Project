@@ -28,6 +28,8 @@ submitbtn.addEventListener('click', (e) => {
     var days = document.getElementById('days').value;
     var time = document.getElementById('time').value;
     var ampm = document.getElementById('ampm').value;
+    var email = document.getElementById('email').value;
+    var phonenumber = document.getElementById('phonenumber').value;
 
     const database = getDatabase(app);
 
@@ -35,11 +37,13 @@ submitbtn.addEventListener('click', (e) => {
     const user = auth.currentUser;
 
     if (user) {
-        update(ref(database, 'NeedABuddy/' + username), {
+        update(ref(database, 'IAmBuddy/' + username), {
             course: course,
             days: days,
             time: time,
-            AmPm: ampm
+            AmPm: ampm,
+            email: email,
+            phonenumber: phonenumber
         })
         alert("Updated");
         // ...
