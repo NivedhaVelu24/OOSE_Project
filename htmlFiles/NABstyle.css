@@ -9,6 +9,26 @@
     background-size: cover;
     height: 109vh;
 }
+.button .logout{
+    width: 160px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    padding-bottom: 5px;
+    margin-left: 1200px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.button .logout a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.logout:hover{
+    background-color: rgb(213, 231, 18);
+}
 .main{
     width: 480px;
     height: 440px;
