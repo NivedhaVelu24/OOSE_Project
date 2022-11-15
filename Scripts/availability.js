@@ -9,7 +9,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 
 // Your web app's Firebase configuration
 
-availability.addEventListener('click', (e) => {
+// availability.addEventListener('click', (e) => {
 
 
     const firebaseConfig = {
@@ -22,15 +22,26 @@ availability.addEventListener('click', (e) => {
         appId: "1:998018118661:web:e3efc07e188386b409586c"
     };
 
-    firebase.initializeApp(firebaseConfig);
-    var firebaseRef = firebase.database().ref("IAmBuddy");
-    firebaseRef.once("value", function (snapshot) {
-        var data = snapshot.val();
-        for (let i in data) {
-            console.log(data[i]);
-        }
-    })
+
+    // var firebaseRef = firebase.database().ref("IAmBuddy");
+    // firebaseRef.once("value", function (snapshot) {
+    //     var data = snapshot.val();
+    //     for (let i in data) {
+    //         console.log(data[i]);
+    //     }
+    // })
+
+    // Get a database reference to our posts
+    const db = getDatabase();
+const dbref = db.ref('https://studybuddy-9ed84-default-rtdb.firebaseio.com/IAmBuddy');
+
+    // Attach an asynchronous callback to read the data at our posts reference
+    dbref.on('value', (snapshot) => {
+        console.log(snapshot.val());
+    }, (errorObject) => {
+        console.log('The read failed: ' + errorObject.name);
+    }); 
 
 
 
-});
+// });
