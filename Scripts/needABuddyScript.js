@@ -8,17 +8,17 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 
 // Your web app's Firebase configuration
 
-submitbtn.addEventListener('click', (e) => {
+const firebaseConfig = {
+    apiKey: "AIzaSyADh8fA1NB4alt_eRKEZVewSvrDHk-_2cI",
+    authDomain: "studybuddy-9ed84.firebaseapp.com",
+    databaseURL: "https://studybuddy-9ed84-default-rtdb.firebaseio.com",
+    projectId: "studybuddy-9ed84",
+    storageBucket: "studybuddy-9ed84.appspot.com",
+    messagingSenderId: "998018118661",
+    appId: "1:998018118661:web:e3efc07e188386b409586c"
+};
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyADh8fA1NB4alt_eRKEZVewSvrDHk-_2cI",
-        authDomain: "studybuddy-9ed84.firebaseapp.com",
-        databaseURL: "https://studybuddy-9ed84-default-rtdb.firebaseio.com",
-        projectId: "studybuddy-9ed84",
-        storageBucket: "studybuddy-9ed84.appspot.com",
-        messagingSenderId: "998018118661",
-        appId: "1:998018118661:web:e3efc07e188386b409586c"
-    };
+submitbtn.addEventListener('click', (e) => {
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
@@ -44,4 +44,5 @@ submitbtn.addEventListener('click', (e) => {
         alert("Updated");
         // ...
     }
+
 });

@@ -3,12 +3,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+// import firebase from "@firebase/app-compat";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 
-submitbtn.addEventListener('click', (e) => {
+availability.addEventListener('click', (e) => {
+
 
     const firebaseConfig = {
         apiKey: "AIzaSyADh8fA1NB4alt_eRKEZVewSvrDHk-_2cI",
@@ -20,36 +22,15 @@ submitbtn.addEventListener('click', (e) => {
         appId: "1:998018118661:web:e3efc07e188386b409586c"
     };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    //const database = getDatabase(app);
-    var username = document.getElementById('username').value;
-    var course = document.getElementById('course').value;
-    var days = document.getElementById('days').value;
-    var time = document.getElementById('time').value;
-    var ampm = document.getElementById('ampm').value;
-    var email = document.getElementById('email').value;
-    var phonenumber = document.getElementById('phonenumber').value;
+    firebase.initializeApp(firebaseConfig);
+    var firebaseRef = firebase.database().ref("IAmBuddy");
+    firebaseRef.once("value", function (snapshot) {
+        var data = snapshot.val();
+        for (let i in data) {
+            console.log(data[i]);
+        }
+    })
 
-    const database = getDatabase(app);
-
-    const auth = getAuth();
-    const user = auth.currentUser;
-
-    if (user) {
-        update(ref(database, 'IAmBuddy/' + username), {
-            course: course,
-            days: days,
-            time: time,
-            AmPm: ampm,
-            email: email,
-            phonenumber: phonenumber
-        })
-        alert("Updated");
-        // ...
-    }
-
-    
 
 
 });
