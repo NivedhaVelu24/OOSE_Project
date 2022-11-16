@@ -72,20 +72,19 @@ submitbtn.addEventListener('click', (e) => {
             check2 = obj[i].course + obj[i].days + obj[i].time + obj[i].AmPm;
             // console.log("inside for");
             // console.log(obj[i].course);
-            console.log(check);
-            console.log(check2);
+            // console.log(check);
+            // console.log(check2);
 
 
             if (check == check2) {
-                console.log("true");
+                // console.log("true");
                 //enter details to be displayed here.
-                console.log("before display");
-                console.log("contact - ", obj[i].email);
-                
+                // console.log("before display");
+                console.log("contact - ", obj[i].email); 
             }
             else {
-                console.log("mismatch")
-                console.log("available instructors -",  obj[i].email, obj[i].course, obj[i].days, obj[i].time, obj[i].AmPm );
+                // console.log("mismatch")
+                console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
             }
 
         }
