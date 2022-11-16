@@ -29,6 +29,7 @@ submitbtn.addEventListener('click', (e) => {
     var time = document.getElementById('time').value;
     var ampm = document.getElementById('ampm').value;
 
+
     const database = getDatabase(app);
 
     const auth = getAuth();
@@ -80,18 +81,15 @@ submitbtn.addEventListener('click', (e) => {
                 //enter details to be displayed here.
                 console.log("before display");
                 console.log("contact - ", obj[i].email);
+                
             }
             else {
                 console.log("mismatch")
+                console.log("available instructors -",  obj[i].email, obj[i].course, obj[i].days, obj[i].time, obj[i].AmPm );
             }
 
         }
         
-
-        // alert(obj[course.val()]);
-
-
-
 
     }).catch((error) => {
         console.error(error);
