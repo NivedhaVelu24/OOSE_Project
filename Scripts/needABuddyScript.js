@@ -64,7 +64,7 @@ submitbtn.addEventListener('click', (e) => {
         // } else {
         //     console.log("No data available");
         // }
-        snapshot.forEach(function(element){
+        snapshot.forEach(function (element) {
             // console.log(element.val());
             obj.push(element.val());
         });
@@ -82,17 +82,17 @@ submitbtn.addEventListener('click', (e) => {
                 // console.log("true");
                 //enter details to be displayed here.
                 // console.log("before display");
-                console.log("contact - ", obj[i].email); 
-                res.innerHTML =  `Instructor Available - contact ${obj[i].email}`;
+                console.log("contact - ", obj[i].email);
+                res.innerHTML = `Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`;
             }
             else {
                 // console.log("mismatch")
                 // console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
-                res2.innerHTML =  `other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
+                res2.innerHTML = `other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
             }
 
         }
-        
+
 
     }).catch((error) => {
         console.error(error);
