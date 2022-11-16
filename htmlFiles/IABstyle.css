@@ -22,6 +22,26 @@
     border-radius: 12px;
     padding: 50px;
 }
+.button .logout{
+    width: 160px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    padding-bottom: 5px;
+    margin-left: 1200px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.button .logout a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.logout:hover{
+    background-color: rgb(213, 231, 18);
+}
 .main h1{
     width: 250px;
     font-family: sans-serif;
