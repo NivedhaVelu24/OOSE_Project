@@ -34,6 +34,8 @@ submitbtn.addEventListener('click', (e) => {
     const auth = getAuth();
     const user = auth.currentUser;
 
+
+
     if (user) {
         update(ref(database, 'NeedABuddy/' + username), {
             course: course,
@@ -45,21 +47,54 @@ submitbtn.addEventListener('click', (e) => {
         // ...
     }
 
-    var obj = []
+    var check = course + days + time + ampm
+    alert(check);
+
+    var obj = [];
+    var check2
     const dbRef = ref(getDatabase());
     get(child(dbRef, "IAmBuddy")).then((snapshot) => {
-        if (snapshot.exists()) {
-            console.log("snapshot val - ", snapshot.val());
-            obj.push(snapshot.val())
+        // if (snapshot.exists()) {
+        //     console.log(snapshot.val());
+        //     console.log("snapshot", snapshot);
 
-        } else {
-            console.log("No data available");
+        // } else {
+        //     console.log("No data available");
+        // }
+        snapshot.forEach(function(element){
+            // console.log(element.val());
+            obj.push(element.val());
+        });
+
+        console.log("obj: ", obj);
+        for (let i = 0; i < obj.length; i++) {
+            check2 = obj[i].course + obj[i].days + obj[i].time + obj[i].AmPm;
+            // console.log("inside for");
+            // console.log(obj[i].course);
+            console.log(check);
+            console.log(check2);
+
+
+            if (check == check2) {
+                console.log("true");
+                //enter details to be displayed here.
+                console.log("before display");
+                console.log("contact - ", obj[i].email);
+            }
+            else {
+                console.log("mismatch")
+            }
+
         }
+        
+
+        // alert(obj[course.val()]);
+
+
+
+
     }).catch((error) => {
         console.error(error);
     });
-
-    console.log(obj);
-
 
 });

@@ -38,6 +38,7 @@ submitbtn.addEventListener('click', (e) => {
 
     if (user) {
         update(ref(database, 'IAmBuddy/' + username), {
+            username: username,
             course: course,
             days: days,
             time: time,
