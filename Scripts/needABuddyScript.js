@@ -45,10 +45,13 @@ submitbtn.addEventListener('click', (e) => {
         // ...
     }
 
+    var obj = []
     const dbRef = ref(getDatabase());
     get(child(dbRef, "IAmBuddy")).then((snapshot) => {
         if (snapshot.exists()) {
-            console.log(snapshot.val());
+            console.log("snapshot val - ", snapshot.val());
+            obj.push(snapshot.val())
+
         } else {
             console.log("No data available");
         }
@@ -56,6 +59,7 @@ submitbtn.addEventListener('click', (e) => {
         console.error(error);
     });
 
+    console.log(obj);
 
 
 });
