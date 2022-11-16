@@ -28,6 +28,8 @@ submitbtn.addEventListener('click', (e) => {
     var days = document.getElementById('days').value;
     var time = document.getElementById('time').value;
     var ampm = document.getElementById('ampm').value;
+    var res = document.getElementById("res");
+    var res2 = document.getElementById("res2");
 
 
     const database = getDatabase(app);
@@ -81,10 +83,12 @@ submitbtn.addEventListener('click', (e) => {
                 //enter details to be displayed here.
                 // console.log("before display");
                 console.log("contact - ", obj[i].email); 
+                res.innerHTML =  `Instructor Available - contact ${obj[i].email}`;
             }
             else {
                 // console.log("mismatch")
-                console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
+                // console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
+                res2.innerHTML =  `other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
             }
 
         }
