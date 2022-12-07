@@ -50,11 +50,13 @@ submitbtn.addEventListener('click', (e) => {
         // ...
     }
 
-    var check = course + days + time + ampm
+    var check = course + days + time + ampm;
     //alert(check);
+
 
     var obj = [];
     var check2
+    var check3 = 0;
     const dbRef = ref(getDatabase());
     get(child(dbRef, "IAmBuddy")).then((snapshot) => {
         // if (snapshot.exists()) {
@@ -82,14 +84,17 @@ submitbtn.addEventListener('click', (e) => {
                 // console.log("true");
                 //enter details to be displayed here.
                 // console.log("before display");
+                check3 += 1;
+
                 console.log("contact - ", obj[i].email);
                 res.innerHTML = `Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`;
                 alert(`Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`);
+                break;
             }
-            else {
+            else if (check3 == 0) {
                 // console.log("mismatch")
                 // console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
-                res2.innerHTML = `other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
+                res2.innerHTML = `other available instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
                 alert(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
             }
 
