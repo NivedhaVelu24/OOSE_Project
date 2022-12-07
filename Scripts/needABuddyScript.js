@@ -51,7 +51,7 @@ submitbtn.addEventListener('click', (e) => {
     }
 
     var check = course + days + time + ampm
-    alert(check);
+    //alert(check);
 
     var obj = [];
     var check2
@@ -84,11 +84,13 @@ submitbtn.addEventListener('click', (e) => {
                 // console.log("before display");
                 console.log("contact - ", obj[i].email);
                 res.innerHTML = `Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`;
+                alert(`Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`);
             }
             else {
                 // console.log("mismatch")
                 // console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
                 res2.innerHTML = `other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
+                alert(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
             }
 
         }
