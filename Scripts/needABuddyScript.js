@@ -94,7 +94,7 @@ submitbtn.addEventListener('click', (e) => {
             else if (check3 == 0) {
                 // console.log("mismatch")
                 // console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
-                res2.innerHTML = `other available instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
+                res2.innerHTML = `other available instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}${obj[i].AmPm} `;
                 // alert(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
             }
 
