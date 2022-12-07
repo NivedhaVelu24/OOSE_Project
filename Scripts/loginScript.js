@@ -22,7 +22,7 @@ const database = getDatabase(app);
 const auth = getAuth();
 
 login.addEventListener('click', (e) => {
-  alert("login clicked");
+  // alert("login clicked");
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var username = document.getElementById('username').value;
@@ -38,11 +38,11 @@ login.addEventListener('click', (e) => {
         last_login: dt
       })
 
-      alert('User loged in!');
+      alert('User logging in!');
 
       setTimeout(function () {
         window.location.href = '../htmlFiles/welcomepage.html';
-      }, 5000);
+      }, 2000);
 
     })
     .catch((error) => {

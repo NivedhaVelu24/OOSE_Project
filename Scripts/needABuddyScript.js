@@ -46,7 +46,7 @@ submitbtn.addEventListener('click', (e) => {
             time: time,
             AmPm: ampm
         })
-        alert("Updated");
+        // alert("Updated");
         // ...
     }
 
@@ -88,14 +88,14 @@ submitbtn.addEventListener('click', (e) => {
 
                 console.log("contact - ", obj[i].email);
                 res.innerHTML = `Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`;
-                alert(`Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`);
+                // alert(`Instructor Available - contact: ${obj[i].email}, ${obj[i].phonenumber}`);
                 break;
             }
             else if (check3 == 0) {
                 // console.log("mismatch")
                 // console.log(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
                 res2.innerHTML = `other available instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `;
-                alert(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
+                // alert(`other instructors -   ${obj[i].email}, ${obj[i].course}, ${obj[i].days}, ${obj[i].time}, ${obj[i].AmPm} `);
             }
 
         }

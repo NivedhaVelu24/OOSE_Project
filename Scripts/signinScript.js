@@ -42,7 +42,7 @@ register.addEventListener('click', (e) => {
 
       setTimeout(function () {
         window.location.href = '../htmlFiles/login.html';
-      }, 3000);
+      }, 1000);
 
     })
     .catch((error) => {
