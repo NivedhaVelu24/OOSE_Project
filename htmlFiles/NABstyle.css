@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../images/5.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.button .logout{
+    width: 160px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    padding-bottom: 5px;
+    margin-left: 1200px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.button .logout a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.logout:hover{
+    background-color: rgb(213, 231, 18);
+}
+.main{
+    width: 480px;
+    height: 440px;
+    background: rgba(154, 143, 143, 0.434);
+    position: relative;
+    top: 50%;
+    left: 28%;
+    text-align: center;
+    top: 140px;
+    right: 870px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.main h1{
+    width: 250px;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    left: 22%;
+    color: #000;
+    font-size: 22px;
+    background-color: rgb(146, 130, 226);
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.main input{
+    width: 240px;
+    height: 35px;
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.main input{
+    outline: navajowhite;
+}
+::placeholder{
+    color: #000;
+    font-family: Arial;
+}
+.main p{
+    color: #fff;
+    right: 30%;
+}
+.main select {
+    width: 240px;
+    height: 35px;
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    color: #000;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+.btn{
+    width: 240px;
+    height: 40px;
+    background: rgb(146, 130, 226);
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+    transition: .4s ease;
+}
+.btn:hover{
+    background: #fff;
+    color: rgb(61, 15, 231);
+}
+.btn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}

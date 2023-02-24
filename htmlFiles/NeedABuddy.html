@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Sign in </title>
+    <link rel="stylesheet" href="./NABstyle.css">
+    <script defer type = "module" src="../Scripts/needABuddyScript.js"></script>
+    <!-- <script defer type = "module" src="../Scripts/availability.js"></script> -->
+</head>
+<body>
+    <div class="button">
+        <a id = "logoutbtn" class="logout" href="./login.html"> logout </a>
+    </div>
+    <div class="main">
+        <h1> Need A Buddy 🥺 </h1>
+        <label for="user name"> Your Username:</label>
+            <input id="username" type="'user name" placeholder="Enter Username" style="text-align: center;"><br>
+        <label for="courses">Choose a course:</label>
+            <select name="course" id="course">
+                 <option value="CIS 530"> CIS 530 </option>
+                 <option value="CIS 545"> CIS 545 </option>
+                 <option value="CIS 580"> CIS 580 </option>
+                <option value="CIS 612"> CIS 612 </option>
+            </select><br>
+        <!-- <input id = "email" type="email" class="input-box" placeholder="Email"><br> -->
+        <!-- <input id = "phone number" type="phone number" class="input-box" placeholder="phone number"> -->
+        <label for="days">Choose your day:</label>
+            <select name="days" id="days">
+                <option value="monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+            </select><br>
+            <label for="Time">Choose your time:</label>
+            <select name="time" id="time">
+                <option value="1:00">1:00</option>
+                <option value="2:00">2:00</option>
+                <option value="3;00">3:00</option>
+                <option value="4:00">4:00</option>
+                <option value="5:00">5:00</option>
+                <option value="6:00">6:00</option>
+                <option value="7:00">7:00</option>
+                <option value="8:00">8:00</option>
+                <option value="9:00">9:00</option>
+                <option value="10;00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+            </select>
+            <select name="am,pm" id="ampm">
+                <option value="Am"> Am </option>
+                <option value="Pm"> Pm </option>
+            </select><br>
+        
+        <button id = "submitbtn" class="btn"> Submit </button>
+        <p id = "res" style="color: black;padding-top: 5px;"><p>
+            <br>
+        <p id = "res2" style="color: black;"><p>
+    </div>
+    
+</body>
